@@ -57,7 +57,7 @@ function App() {
       const profileObj = credential ? parseJwt(credential) : null
 
       if (profileObj) {
-        const response = await fetch('http://localhost:5175/api/v1/users', {
+        const response = await fetch('https://dashboard-backend-jero.onrender.com//api/v1/users', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -125,7 +125,7 @@ function App() {
       <GlobalStyles styles={{ html: { WebkitFontSmoothing: 'auto' } }} />
       <RefineSnackbarProvider>
         <Refine
-          dataProvider={dataProvider('http://localhost:5175/api/v1')}
+          dataProvider={dataProvider('https://dashboard-backend-jero.onrender.com//api/v1')}
           // dataProvider={dataProvider('http://localhost:5175/users')}
           notificationProvider={notificationProvider}
           ReadyPage={ReadyPage}
